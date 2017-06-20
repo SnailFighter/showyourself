@@ -1,0 +1,61 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd 
+		http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd 
+        http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop.xsd 
+        http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+	<!--注解说明 -->
+	<context:annotation-config />
+
+	<!-- Spring的配置文件和SpringMVC的配置文件是分别加载的，aspectj要织入controller必须在MVC做配置 -->
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+
+	<!-- 注解驱动声明 -->
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+				<!-- <constructor-arg value="#{T(java.nio.charset.Charset).forName('UTF-8')}" /> -->
+				<constructor-arg value="UTF-8" />
+				<property name="supportedMediaTypes">
+					<list>
+						<value>text/plain;charset=UTF-8</value>
+						<value>text/html;charset=UTF-8</value>
+						<value>applicaiton/javascript;charset=UTF-8</value>
+					</list>
+				</property>
+				<property name="writeAcceptCharset">
+					<value>false</value>
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+
+
+
+
+
+	<!-- 自动扫描，匹配controller层 -->
+	<context:component-scan base-package="com.chaohongtao.myself">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+
+
+
+	<!-- 静态文件转给容器处理 -->
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
+	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+
+	<mvc:default-servlet-handler default-servlet-name="default"></mvc:default-servlet-handler>
+
+
+</beans>
