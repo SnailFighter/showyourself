@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="RESUME@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="RESUME">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sys"/>
+    <table id="7" parent="2" name="experience"/>
+    <table id="8" parent="2" name="myinfo"/>
+    <table id="9" parent="2" name="school"/>
+    <column id="10" parent="7" name="id">
+      <Position>1</Position>
+      <Comment>ID</Comment>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="11" parent="7" name="company_name">
+      <Position>2</Position>
+      <Comment>公司名称</Comment>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="12" parent="7" name="job">
+      <Position>3</Position>
+      <Comment>职位</Comment>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="13" parent="7" name="start_time">
+      <Position>4</Position>
+      <Comment>开始日期</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="14" parent="7" name="end_time">
+      <Position>5</Position>
+      <Comment>结束日期</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="15" parent="7" name="content">
+      <Position>6</Position>
+      <Comment>工作内容</Comment>
+      <DataType>varchar(1000)|0</DataType>
+    </column>
+    <column id="16" parent="7" name="develop_environment">
+      <Position>7</Position>
+      <Comment>开发环境</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="17" parent="7" name="develop_tool">
+      <Position>8</Position>
+      <Comment>开发工具</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="18" parent="7" name="frameworks">
+      <Position>9</Position>
+      <Comment>开发框架</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="19" parent="7" name="status">
+      <Position>10</Position>
+      <Comment>0-不显示，1-显示</Comment>
+      <DataType>int(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="7" name="leave_reason">
+      <Position>11</Position>
+      <Comment>离职原因</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="21" parent="7" name="user_id">
+      <Position>12</Position>
+      <Comment>用户Id</Comment>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="22" parent="7" name="FK3454C9E613C6A52A">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="23" parent="7" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="24" parent="7" name="FK3454C9E613C6A52A">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>RESUME</RefSchemaName>
+      <RefTableName>myinfo</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="25" parent="8" name="id">
+      <Position>1</Position>
+      <Comment>ID</Comment>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="26" parent="8" name="create_time">
+      <Position>2</Position>
+      <Comment>建立日期</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="27" parent="8" name="modify_time">
+      <Position>3</Position>
+      <Comment>修改日期</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="28" parent="8" name="name">
+      <Position>4</Position>
+      <Comment>姓名</Comment>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="29" parent="8" name="sex">
+      <Position>5</Position>
+      <Comment>性别</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="8" name="age">
+      <Position>6</Position>
+      <Comment>年龄</Comment>
+      <DataType>int(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="8" name="school_id">
+      <Position>7</Position>
+      <Comment>学校id</Comment>
+      <DataType>int(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="8" name="professional">
+      <Position>8</Position>
+      <Comment>专业</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="8" name="degree">
+      <Position>9</Position>
+      <Comment>学历</Comment>
+      <DataType>varchar(16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="8" name="school_start_time">
+      <Position>10</Position>
+      <Comment>大学开始时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="35" parent="8" name="school_end_time">
+      <Position>11</Position>
+      <Comment>大学结束时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="36" parent="8" name="login_ip">
+      <Position>12</Position>
+      <Comment>最后登录IP</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="37" parent="8" name="password">
+      <Position>13</Position>
+      <Comment>密码</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="8" name="status">
+      <Position>14</Position>
+      <Comment>0-不显示，1-显示</Comment>
+      <DataType>int(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="39" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="9" name="id">
+      <Position>1</Position>
+      <Comment>ID</Comment>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="41" parent="9" name="school_name">
+      <Position>2</Position>
+      <Comment>学校名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="42" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
