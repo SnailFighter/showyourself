@@ -28,13 +28,14 @@ public class MyInfoDao {
                 new ResultSetExtractor<MyInfo>() {
                     @Override
                     public MyInfo extractData(ResultSet rs) throws SQLException, DataAccessException {
+                        rs.next();
                         MyInfo info = new MyInfo();
                         info.setId(rs.getLong("id"));
                         info.setAge(rs.getInt("age"));
                         info.setCreate_time(rs.getDate("create_time"));
                         info.setModify_time(rs.getDate("modify_time"));
                         info.setName(rs.getString("name"));
-                        info.setUsername(rs.getString("username"));
+                        //info.setUsername(rs.getString("username"));
                         info.setPassword(rs.getString("password"));
                         info.setAge(rs.getInt("age"));
                         info.setProfessional(rs.getString("professional"));
@@ -44,8 +45,8 @@ public class MyInfoDao {
                         info.setSchool_start_time(rs.getDate("school_start_time"));
                         info.setLogin_ip(rs.getString("login_ip"));
                         info.setSex(rs.getString("sex"));
-                        List<Long> arr = (List<Long>) rs.getArray("experience_id").getArray();
-                        info.setExperience_id(arr);
+                       // List<Long> arr = (List<Long>) rs.getArray("experience_id").getArray();
+                        //info.setExperience_id(arr);
                         return info;
                     }
                 }

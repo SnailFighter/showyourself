@@ -8,7 +8,7 @@
         http://www.springframework.org/schema/context/spring-context.xsd 
         http://www.springframework.org/schema/aop 
 		http://www.springframework.org/schema/aop/spring-aop.xsd 
-        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc
 		http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
@@ -35,17 +35,27 @@
 					<value>false</value>
 				</property>
 			</bean>
+			<bean id="jacksonHttpMessageConverter"
+				class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+
+			</bean>
+			<bean id="stringHttpMessageConverter" class="org.springframework.http.converter.StringHttpMessageConverter">
+
+			</bean>
+
+
 		</mvc:message-converters>
 	</mvc:annotation-driven>
-
-
-
+	<mvc:cors>
+		<mvc:mapping path="http://localhost:4200"/>
+	</mvc:cors>
 
 
 
 	<!-- 自动扫描，匹配controller层 -->
-	<context:component-scan base-package="com.chaohongtao.myself">
+	<context:component-scan base-package="com.chtm.myself">
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Component" />
 	</context:component-scan>
 
 

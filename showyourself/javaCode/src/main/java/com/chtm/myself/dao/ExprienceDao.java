@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -22,6 +24,7 @@ import java.util.List;
  * @create 2017-06-20-下午12:50
  * @工作经历dao
  */
+@Component
 public class ExprienceDao {
 
     @Autowired
@@ -60,6 +63,7 @@ public class ExprienceDao {
         return jdbcTemplate.query(sql, new Object[]{id}, new ResultSetExtractor<Experience>() {
             @Override
             public Experience extractData(ResultSet rs) throws SQLException, DataAccessException {
+                rs.next();
                 Experience experience = new Experience();
                 experience.setCompany_name(rs.getString("company_name"));
                 experience.setContent(rs.getString("content"));
@@ -74,5 +78,25 @@ public class ExprienceDao {
         });
     }
 
+    //根据用户id查询工作经历
+    public List<Experience> queryByUserId(long id, int status){
+        String sql = "select * from experience where user_id=? and status=?";
+        return jdbcTemplate.query(sql,new Object[]{id,status},new RowMapper<Experience>(){
+            @Override
+            public Experience mapRow(ResultSet rs, int i) throws SQLException {
+                rs.next();
+                Experience experience = new Experience();
+                experience.setCompany_name(rs.getString("company_name"));
+                experience.setContent(rs.getString("content"));
+                experience.setDevelop_environment(rs.getString("develop_environment"));
+                experience.setDevelop_tool(rs.getString("develop_tool"));
+                experience.setFrameworks(rs.getString("frameworks"));
+                experience.setEnd_time(rs.getDate("end_time"));
+                experience.setStart_time(rs.getDate("start_time"));
+                experience.setStatus(rs.getInt("status"));
+                return experience;
+            }
+        });
+    }
 
 }

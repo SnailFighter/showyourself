@@ -30,6 +30,8 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 
+
+
 	<import resource="./application-datasource.xml"/>
 	<import resource="./application-servlet.xml"/>
 
@@ -60,13 +62,13 @@
 	<aop:config>
 		<!-- 配置切点为service层 -->
 		<aop:pointcut id="pointCut"
-					  expression="execution(public * com.chaohongtao.*.service.*(..))" />
+					  expression="execution(public * com.chtm.*.service.*(..))" />
 		<aop:advisor pointcut-ref="pointCut" advice-ref="txAdvice" />
 	</aop:config>
 
 
 	
-	<context:component-scan base-package="com.chaohongtao.myself">
+	<context:component-scan base-package="com.chtm.myself">
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>

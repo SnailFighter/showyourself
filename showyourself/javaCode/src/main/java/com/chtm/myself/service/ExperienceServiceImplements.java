@@ -12,6 +12,8 @@ import com.chtm.myself.interfaces.ExperienceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @auther cht
  * @create 2017-06-20-下午1:39
@@ -42,4 +44,11 @@ public class ExperienceServiceImplements implements ExperienceService {
     public boolean modify(Experience experience) {
         return exprienceDao.alter(experience);
     }
+
+    @Override
+    public List<Experience> queryByUserId(Long id, int status) {
+        return exprienceDao.queryByUserId(id,status);
+    }
+
+
 }
