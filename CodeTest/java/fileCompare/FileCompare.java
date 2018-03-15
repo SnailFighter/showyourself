@@ -7,8 +7,6 @@ import java.io.File;
 import java.lang.Exception;
 
 
-
-
 public class FileCompare{
 
 	public static void main(String[] args){

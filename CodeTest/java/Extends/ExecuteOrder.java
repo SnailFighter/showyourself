@@ -2,10 +2,10 @@ class ExecuteOrder{
 
 	public static void main(String[] args){
 	
-		A a = new A();
+		//A a = new A();
 		B b = new B();
 		
-		a.show();
+		//a.show();
 		b.show();
 	
 	}

@@ -1,0 +1,45 @@
+configsetroot:C:\Windows\ConfigSetRoot
+USERDOMAIN_ROAMINGPROFILE:DESKTOP-IR4CKE4
+LOCALAPPDATA:C:\Users\OP-T-PC-0013\AppData\Local
+PROCESSOR_LEVEL:6
+CLASSPAHT:.;C:\Program Files\Java\jdk1.8.0_131\lib;C:\Program Files\Java\jdk1.8.0_131\lib\tools.jar
+USERDOMAIN:DESKTOP-IR4CKE4
+FPS_BROWSER_APP_PROFILE_STRING:Internet Explorer
+LOGONSERVER:\\DESKTOP-IR4CKE4
+JAVA_HOME:C:\Program Files\Java\jdk1.8.0_131
+SESSIONNAME:Console
+ALLUSERSPROFILE:C:\ProgramData
+PROCESSOR_ARCHITECTURE:AMD64
+PSModulePath:C:\Users\OP-T-PC-0013\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+SystemDrive:C:
+asl.log:Destination=file
+APPDATA:C:\Users\OP-T-PC-0013\AppData\Roaming
+USERNAME:OP-T-PC-0013
+ProgramFiles(x86):C:\Program Files (x86)
+CommonProgramFiles:C:\Program Files\Common Files
+Path:C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\Program Files\TortoiseSVN\bin;C:\Program Files\nodejs\;C:\Program Files\TortoiseGit\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\Java\jdk1.8.0_131\jre\bin;D:\maven\apache-maven-3.5.0/bin;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\OP-T-PC-0013\AppData\Roaming\npm
+FPS_BROWSER_USER_PROFILE_STRING:Default
+PATHEXT:.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+OS:Windows_NT
+COMPUTERNAME:DESKTOP-IR4CKE4
+PROCESSOR_REVISION:3c03
+CommonProgramW6432:C:\Program Files\Common Files
+NLS_LANG: SIMPLIFIED CHINESE_CHINA.ZHS16GBK
+ComSpec:C:\Windows\system32\cmd.exe
+ProgramData:C:\ProgramData
+ProgramW6432:C:\Program Files
+HOMEPATH:\Users\OP-T-PC-0013
+SystemRoot:C:\Windows
+TEMP:C:\Users\OP-T-P~1\AppData\Local\Temp
+MYSQL_HOME:C:\Program Files\MySQL\MySQL Server 5.7
+HOMEDRIVE:C:
+PROCESSOR_IDENTIFIER:Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+USERPROFILE:C:\Users\OP-T-PC-0013
+TMP:C:\Users\OP-T-P~1\AppData\Local\Temp
+M2_HOME:D:\maven\apache-maven-3.5.0
+CommonProgramFiles(x86):C:\Program Files (x86)\Common Files
+ProgramFiles:C:\Program Files
+PUBLIC:C:\Users\Public
+NUMBER_OF_PROCESSORS:4
+windir:C:\Windows
+=:::::\
