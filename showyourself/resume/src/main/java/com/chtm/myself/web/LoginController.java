@@ -31,7 +31,6 @@ import static com.chtm.myself.entity.enums.ReturnCode.SUCCESS;
  * @create 2017-06-{DAY}-下午3:11
  * @
  */
-
 @CrossOrigin
 @RestController
 @RequestMapping("/login")

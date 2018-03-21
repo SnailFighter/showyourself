@@ -1,4 +1,4 @@
-/*
+
 package com.chtm.myself.config;
 
 import org.springframework.stereotype.Component;
@@ -7,13 +7,13 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-*/
+
 /**
  * Created by snail on 17-8-15.
- *//*
+ */
 
 @Component
-public class CorsFilter implements Filter{
+public class CorsFilter implements Filter {
 
     final static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(CorsFilter.class);
 
@@ -34,4 +34,3 @@ public class CorsFilter implements Filter{
     @Override
     public void destroy() {}
 }
-*/
