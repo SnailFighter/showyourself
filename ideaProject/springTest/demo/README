@@ -1,0 +1,4 @@
+demo
+
+1  通过代码向spring容器中添加bean
+2  token实现接口的幂等性
